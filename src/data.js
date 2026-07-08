@@ -10,7 +10,7 @@ export const projects = [
     description:
       "A Python/Streamlit tool that turns a written vibe description into a curated Spotify playlist, using the Gemini API as a taste model to replace Spotify's deprecated recommendation endpoints.",
     stack: ["Python", "Streamlit", "Gemini API", "Spotify API"],
-    link: "https://github.com/shadowstorm37",
+    link: "https://github.com/shadowstorm37/playlist-builder",
     year: "2026",
     featured: true,
   },

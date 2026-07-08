@@ -220,8 +220,14 @@ export default function App() {
           <span className="mini-foot">United States · EST</span>
         </Tile>
 
-        <Tile className="cell cell--stack" spotlight>
-          <span className="mini-label">Working with</span>
+        <Tile className="cell cell--about" spotlight>
+          <span className="mini-label">About me</span>
+          <p className="about-text">
+            When I'm not coding I like to pass my time by playing bass guitar,
+            listening to music, playing games, or doing kendo. I like picking up 
+            new things fast, and lately that's been learning to build apps that use
+            AI.
+          </p>
           <ul className="stack-list">
             {stack.map((s) => (
               <li key={s} onMouseEnter={() => playTick(1.2)}>
@@ -301,7 +307,7 @@ export default function App() {
             {social.email}
           </a>
           <p className="contact-note">
-            Open to internships, collaborations, and interesting problems.
+            Open to a full-time job, collaborations, and interesting problems.
           </p>
         </Tile>
       </div>

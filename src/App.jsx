@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { projects, stack, social } from "./data";
+import { projects, stack, social, currentlyBuilding } from "./data";
 import "./App.css";
 
 function Clock() {
@@ -123,6 +123,11 @@ function SoundToggle() {
   );
 }
 
+function daysUntil(dateStr) {
+  const diff = new Date(dateStr) - new Date();
+  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
 export default function App() {
   return (
     <main className="page">
@@ -161,6 +166,21 @@ export default function App() {
               </li>
             ))}
           </ul>
+        </Tile>
+
+        <Tile className="cell cell--building" spotlight>
+          <div className="section-head">
+            <span className="mini-label">Currently building</span>
+            <span className="count">{daysUntil(currentlyBuilding.deadline)}d</span>
+          </div>
+          <h3 className="building-name">{currentlyBuilding.name}</h3>
+          <p className="building-tagline">{currentlyBuilding.tagline}</p>
+          <p className="building-desc">{currentlyBuilding.description}</p>
+          <div className="project-stack">
+            {currentlyBuilding.stack.map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </div>
         </Tile>
 
         <Tile className="cell cell--projects" spotlight>

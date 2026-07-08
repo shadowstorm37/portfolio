@@ -26,6 +26,15 @@ export const projects = [
   // },
 ];
 
+export const currentlyBuilding = {
+  name: "Sequax",
+  tagline: "Top-down survival horror, built in Unity",
+  description:
+    "A sound-and-light asymmetry game — manage noise, manage light, stay hidden from something that's hunting by ear.",
+  stack: ["Unity", "C#"],
+  deadline: "2026-07-30",
+};
+
 export const stack = [
   "TypeScript",
   "React",

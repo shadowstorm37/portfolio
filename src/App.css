@@ -103,6 +103,7 @@ body {
 .cell--clock    { grid-column: span 1; grid-row: span 1; display: flex; align-items: center; }
 .cell--loc      { grid-column: span 1; grid-row: span 1; display: flex; flex-direction: column; justify-content: center; }
 .cell--stack    { grid-column: span 2; grid-row: span 2; }
+.cell--building { grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; }
 .cell--projects { grid-column: span 4; }
 .cell--gh       { grid-column: span 1; }
 .cell--li       { grid-column: span 1; }
@@ -205,6 +206,15 @@ body {
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 .stack-list li:hover { border-color: var(--accent); color: var(--accent-soft); }
+
+.building-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+.building-tagline { color: var(--accent-soft); font-size: 0.88rem; margin-top: 6px; }
+.building-desc { color: var(--muted); font-size: 0.88rem; margin-top: 10px; }
+.cell--building .project-stack { margin-top: auto; padding-top: 16px; }
 
 /* ── Projects ───────────────────────────────── */
 .section-head {

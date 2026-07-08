@@ -197,12 +197,13 @@ export default function App() {
       <div className="grid">
         <Tile className="cell cell--hero" spotlight>
           <span className="eyebrow">James Barnett — Software Engineer</span>
-          <h1 className="hero-title">
+          {/*<h1 className="hero-title">
             I build <em>software</em> that<br />feels considered.
-          </h1>
+          </h1>*/}
           <p className="hero-sub">
-            CS student and engineer working across the stack — from Python data
-            tooling to Unity game systems and React front-ends.
+            Hello, I'm James Barnett, a software developer who works mostly in Python.
+            I'm focused on leveraging AI to solve problems I find interesting to stay up
+            to date on today's coding environment.
           </p>
           <div className="hero-tags">
             <span className="status-dot" /> Available for work

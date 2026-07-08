@@ -35,6 +35,14 @@ export const buildingProjects = [
     stack: ["Unity", "C#"],
     deadline: "2026-07-30",
   },
+    
+   {
+     name: "template",
+     tagline: "making sure carousel works",
+     description: "carousel please work",
+     stack: ["JavaScript"],
+     deadline: "2026-07-10",
+   },
   // ── copy the block below to add another in-progress project ──
   // {
   //   name: "",

@@ -6,9 +6,9 @@
 export const projects = [
   {
     title: "playlist-builder",
-    tagline: "Plain-English vibes → Spotify playlists",
+    tagline: "Turning vibes into Spotify playlists",
     description:
-      "A Python/Streamlit tool that turns a plain-English vibe description into a curated Spotify playlist, using the Gemini API as a taste model to replace Spotify's deprecated recommendation endpoints.",
+      "A Python/Streamlit tool that turns a written vibe description into a curated Spotify playlist, using the Gemini API as a taste model to replace Spotify's deprecated recommendation endpoints.",
     stack: ["Python", "Streamlit", "Gemini API", "Spotify API"],
     link: "https://github.com/shadowstorm37",
     year: "2026",
@@ -26,22 +26,32 @@ export const projects = [
   // },
 ];
 
-export const currentlyBuilding = {
-  name: "Sequax",
-  tagline: "Top-down survival horror, built in Unity",
-  description:
-    "A sound-and-light asymmetry game — manage noise, manage light, stay hidden from something that's hunting by ear.",
-  stack: ["Unity", "C#"],
-  deadline: "2026-07-30",
-};
+export const buildingProjects = [
+  {
+    name: "Sequax",
+    tagline: "Top-down survival horror, built in Unity",
+    description:
+      "A Darkwood style, top-down horror game where you manage noise, manage light, stay hidden from something that's hunting by ear.",
+    stack: ["Unity", "C#"],
+    deadline: "2026-07-30",
+  },
+  // ── copy the block below to add another in-progress project ──
+  // {
+  //   name: "",
+  //   tagline: "",
+  //   description: "",
+  //   stack: [],
+  //   deadline: "YYYY-MM-DD",
+  // },
+];
 
 export const stack = [
-  "TypeScript",
-  "React",
   "Python",
-  "Unity / C#",
+  "React",
+  "JavaScript",
+  "C#",
   "Node.js",
-  "PostgreSQL",
+  "SQL",
 ];
 
 export const social = {

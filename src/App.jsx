@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { projects, stack, social, currentlyBuilding } from "./data";
+import { projects, stack, social, buildingProjects } from "./data";
 import "./App.css";
 
 function Clock() {
@@ -123,9 +123,71 @@ function SoundToggle() {
   );
 }
 
+const ChevronLeft = () => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+);
+const ChevronRight = () => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <path d="M9 18l6-6-6-6" />
+  </svg>
+);
+
 function daysUntil(dateStr) {
   const diff = new Date(dateStr) - new Date();
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
+function BuildingCarousel() {
+  const [index, setIndex] = useState(0);
+  const ref = useRef(null);
+  useSpotlight(ref);
+  const total = buildingProjects.length;
+  const current = buildingProjects[index];
+
+  const go = (dir) => {
+    playTick(dir > 0 ? 1.1 : 0.9);
+    setIndex((i) => (i + dir + total) % total);
+  };
+
+  return (
+    <div ref={ref} className="tile tile--spot cell cell--building">
+      <div className="section-head">
+        <span className="mini-label">Currently building</span>
+        <span className="count">{daysUntil(current.deadline)}d</span>
+      </div>
+      <h3 className="building-name">{current.name}</h3>
+      <p className="building-tagline">{current.tagline}</p>
+      <p className="building-desc">{current.description}</p>
+      <div className="project-stack">
+        {current.stack.map((t) => (
+          <span key={t}>{t}</span>
+        ))}
+      </div>
+      {total > 1 && (
+        <div className="carousel-nav">
+          <button
+            className="carousel-arrow"
+            onClick={() => go(-1)}
+            aria-label="Previous project"
+          >
+            <ChevronLeft />
+          </button>
+          <span className="carousel-index">
+            {index + 1} / {total}
+          </span>
+          <button
+            className="carousel-arrow"
+            onClick={() => go(1)}
+            aria-label="Next project"
+          >
+            <ChevronRight />
+          </button>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function App() {
@@ -168,20 +230,7 @@ export default function App() {
           </ul>
         </Tile>
 
-        <Tile className="cell cell--building" spotlight>
-          <div className="section-head">
-            <span className="mini-label">Currently building</span>
-            <span className="count">{daysUntil(currentlyBuilding.deadline)}d</span>
-          </div>
-          <h3 className="building-name">{currentlyBuilding.name}</h3>
-          <p className="building-tagline">{currentlyBuilding.tagline}</p>
-          <p className="building-desc">{currentlyBuilding.description}</p>
-          <div className="project-stack">
-            {currentlyBuilding.stack.map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
-        </Tile>
+        <BuildingCarousel />
 
         <Tile className="cell cell--projects" spotlight>
           <div className="section-head">

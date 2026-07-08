@@ -216,6 +216,36 @@ body {
 .building-desc { color: var(--muted); font-size: 0.88rem; margin-top: 10px; }
 .cell--building .project-stack { margin-top: auto; padding-top: 16px; }
 
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.carousel-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.15s ease;
+}
+.carousel-arrow:hover {
+  border-color: var(--accent);
+  color: var(--accent-soft);
+}
+.carousel-arrow:active { transform: scale(0.92); }
+.carousel-index {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--faint);
+}
+
 /* ── Projects ───────────────────────────────── */
 .section-head {
   display: flex; align-items: baseline; justify-content: space-between;

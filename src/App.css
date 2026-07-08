@@ -121,14 +121,14 @@ body {
 }
 .eyebrow::before { content: "// "; color: var(--faint); }
 .hero-title {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.6vw, 2.7rem);
   line-height: 1.02;
   letter-spacing: -0.01em;
 }
 .hero-title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--accent-soft);
 }
 .hero-sub {

@@ -196,10 +196,10 @@ export default function App() {
       <div className="grain" aria-hidden="true" />
       <div className="grid">
         <Tile className="cell cell--hero" spotlight>
-          <span className="eyebrow">James Barnett — Software Engineer</span>
-          {/*<h1 className="hero-title">
-            I build <em>software</em> that<br />feels considered.
-          </h1>*/}
+          {/*<span className="eyebrow">James Barnett — Software Engineer</span>*/}
+          <h1 className="hero-title">
+            James Barnett — <em>Software Engineer</em><br />
+          </h1>
           <p className="hero-sub">
             Hello, I'm James Barnett, a software developer who works mostly in Python.
             I'm focused on leveraging AI to solve problems I find interesting to stay up

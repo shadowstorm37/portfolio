@@ -155,7 +155,7 @@ function BuildingCarousel() {
     <div ref={ref} className="tile tile--spot cell cell--building">
       <div className="section-head">
         <span className="mini-label">Currently building</span>
-        <span className="count">{daysUntil(current.deadline)}d</span>
+        <span className="count">{deadlineLabel(current.deadline)}d</span>
       </div>
       <h3 className="building-name">{current.name}</h3>
       <p className="building-tagline">{current.tagline}</p>

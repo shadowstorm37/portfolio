@@ -139,6 +139,13 @@ function daysUntil(dateStr) {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 }
 
+function deadlineLabel(dateStr) {
+  if (!dateStr || dateStr.trim().toUpperCase() === "NA") {
+    return "Undecided";
+  }
+  return `${daysUntil(dateStr)}d`;
+}
+
 function BuildingCarousel() {
   const [index, setIndex] = useState(0);
   const ref = useRef(null);

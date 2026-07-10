@@ -37,11 +37,11 @@ export const buildingProjects = [
   },
     
    {
-     name: "template",
-     tagline: "making sure carousel works",
-     description: "carousel please work",
-     stack: ["JavaScript"],
-     deadline: "2026-07-10",
+     name: "FM26 Tactics Advisor",
+     tagline: "Deterministic data reader & AI Scout for Football Manager 26",
+     description: "Ingests semi-colon BepInEx CSV exports, and passes them to an LLM that returns structured FM26 tactical instructions.",
+     stack: ["Python", "Pandas", "NumPy", "Pydantic v2", "FastAPI", "Instructor", "Gemini API", "Streamlit"],
+     deadline: "NA",
    },
   // ── copy the block below to add another in-progress project ──
   // {

@@ -215,6 +215,13 @@ export default function App() {
           <div className="hero-tags">
             <span className="status-dot" /> Available for work
           </div>
+          <ul className="stack-list">
+            {stack.map((s) => (
+              <li key={s} onMouseEnter={() => playTick(1.2)}>
+                {s}
+              </li>
+            ))}
+          </ul>
         </Tile>
 
         <Tile className="cell cell--clock" spotlight>
@@ -235,13 +242,6 @@ export default function App() {
             new things fast, and lately that's been learning to build apps that use
             AI.
           </p>
-          <ul className="stack-list">
-            {stack.map((s) => (
-              <li key={s} onMouseEnter={() => playTick(1.2)}>
-                {s}
-              </li>
-            ))}
-          </ul>
         </Tile>
 
         <BuildingCarousel />

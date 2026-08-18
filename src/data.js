@@ -14,6 +14,16 @@ export const projects = [
     year: "2026",
     featured: true,
   },
+  {
+    title: "Sequax",
+    tagline: "Top-down survival horror, built in Unity",
+    description:
+      "A Darkwood style, top-down horror game where you manage noise, manage light, stay hidden from something that's hunting by ear.",
+    stack: ["Unity", "C#", "ShaderLab", "HLSL", "HTML"],
+    link: "https://github.com/shadowstorm37/sequax-game",
+    year: "2026",
+    featured: true,
+  },
   // ── copy the block below to add a project ──
   // {
   //   title: "",
@@ -27,15 +37,6 @@ export const projects = [
 ];
 
 export const buildingProjects = [
-  {
-    name: "Sequax",
-    tagline: "Top-down survival horror, built in Unity",
-    description:
-      "A Darkwood style, top-down horror game where you manage noise, manage light, stay hidden from something that's hunting by ear.",
-    stack: ["Unity", "C#"],
-    deadline: "2026-07-30",
-  },
-    
    {
      name: "FM26 Tactics Advisor",
      tagline: "Deterministic data reader & AI Scout for Football Manager 26",

@@ -5,6 +5,16 @@
 
 export const projects = [
   {
+    title: "bankapp",
+    tagline: "Full-stack banking app on AWS Lambda",
+    description:
+      "A banking app with a FastAPI backend and a React + Vite frontend, with JWT login, customer and admin roles, deposits, withdrawals, transfers and an audit log. A repository layer keeps the services unaware of MongoDB, and it's deployed on AWS: the API on Lambda, the frontend on S3.",
+    stack: ["Python", "FastAPI", "React", "Vite", "JavaScript", "MongoDB", "AWS Lambda", "S3"],
+    link: "https://github.com/shadowstorm37/bankapp",
+    year: "2026",
+    featured: true,
+  },
+  {
     title: "playlist-builder",
     tagline: "Turning vibes into Spotify playlists",
     description:
@@ -21,16 +31,6 @@ export const projects = [
       "A Darkwood style, top-down horror game where you manage noise, manage light, stay hidden from something that's hunting by ear.",
     stack: ["Unity", "C#", "ShaderLab", "HLSL", "HTML"],
     link: "https://github.com/shadowstorm37/sequax-game",
-    year: "2026",
-    featured: true,
-  },
-  {
-    title: "bankapp",
-    tagline: "Full-stack banking app on AWS Lambda",
-    description:
-      "A banking app with a FastAPI backend and a React + Vite frontend, with JWT login, customer and admin roles, deposits, withdrawals, transfers and an audit log. A repository layer keeps the services unaware of MongoDB, and it's deployed on AWS: the API on Lambda, the frontend on S3.",
-    stack: ["Python", "FastAPI", "React", "Vite", "JavaScript", "MongoDB", "AWS Lambda", "S3"],
-    link: "https://github.com/shadowstorm37/bankapp",
     year: "2026",
     featured: true,
   },

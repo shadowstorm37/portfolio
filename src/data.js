@@ -24,6 +24,16 @@ export const projects = [
     year: "2026",
     featured: true,
   },
+  {
+    title: "bankapp",
+    tagline: "Full-stack banking app on AWS Lambda",
+    description:
+      "A banking app with a FastAPI backend and a React + Vite frontend, with JWT login, customer and admin roles, deposits, withdrawals, transfers and an audit log. A repository layer keeps the services unaware of MongoDB, and it's deployed on AWS: the API on Lambda, the frontend on S3.",
+    stack: ["Python", "FastAPI", "React", "Vite", "JavaScript", "MongoDB", "AWS Lambda", "S3"],
+    link: "https://github.com/shadowstorm37/bankapp",
+    year: "2026",
+    featured: true,
+  },
   // ── copy the block below to add a project ──
   // {
   //   title: "",

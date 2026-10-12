@@ -54,6 +54,13 @@ export const buildingProjects = [
      stack: ["Python", "Pandas", "NumPy", "Pydantic v2", "FastAPI", "Instructor", "Gemini API", "Streamlit"],
      deadline: "NA",
    },
+   {
+     name: "Skyline ADS-B",
+     tagline: "Live aircraft tracking & anomaly detection over Florida",
+     description: "Ingests live aircraft data from the OpenSky Network API into PostgreSQL, plots it on a map, and flags altitude drops, possible transponder gaps and emergency squawks with a confidence score.",
+     stack: ["Python", "FastAPI", "SQLAlchemy", "Alembic", "PostgreSQL", "Docker", "React", "Vite", "Leaflet", "pytest"],
+     deadline: "NA",
+   },
   // ── copy the block below to add another in-progress project ──
   // {
   //   name: "",
